@@ -1,4 +1,4 @@
 TmykApp::Application.routes.draw do
-  get "facts/create"
+  post "facts" => 'facts#create'
   post 'emails' =>'emails#create'
 end

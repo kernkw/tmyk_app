@@ -1,5 +1,6 @@
 class FactsController < ApplicationController
   def create
-    Fact.create(params)
+    query = params.permit :url, :parse_key
+    Fact.create(query)
   end
 end
